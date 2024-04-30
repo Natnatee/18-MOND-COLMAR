@@ -49,6 +49,12 @@ a {
   }
 }
 
+p {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
 .button {
   padding: 8px ;
   justify-content: center;
@@ -129,7 +135,8 @@ header {
     .mobile-toggle {
       display: none;
       padding: 10px;
-      @media (max-width: 768px) {
+      
+      @media (max-width: 480px) {
         display: inline-block;
         position: absolute;
         top: 20px;
@@ -179,7 +186,7 @@ section {
 
 /* HERO SECTION */
 
-/* Hero section layout styling with flex */
+/* Hero section layout  with flex */
 .hero {
   display: flex;
   @media (max-width: 1024px) {
@@ -217,7 +224,7 @@ section {
 .hero {
   background-color: rgba(206, 190, 182, 0.623);
   .hero-first {
-    /* background-color: var(--blue-100); */
+
     border-radius: 30px;
     padding : 32px 24px 32px 24px;
     .call-to-action {
@@ -232,11 +239,15 @@ section {
   .hero-second {
     /* border-radius: 30px; */
     padding: 30px 30px;
+    .Lorem{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
     img {
       object-fit: cover;
     }
     .call-to-action{
-      padding : 50px;
+    width: 500px;
     }
   }
 }
@@ -258,7 +269,7 @@ section {
         display:flex;
         flex-direction: column;
         align-content: space-between;
-        background-color: #ffda4b;
+     
     }
   }
   .hero-second2 {
@@ -268,7 +279,7 @@ section {
     flex:40%;
     .Learn2{
         display: flex;
-        background-color: rgb(140, 0, 255);
+       
         .Left{
             display: flex;
             flex:35%;
@@ -277,7 +288,7 @@ section {
 
         .Right{
             display: flex;
-            background-color: #4be4ff;
+        
             flex:65%;
             align-content:end;       
             flex-direction: column;     
@@ -297,27 +308,32 @@ section {
     border-radius: 30px;
     padding : 32px 24px 32px 24px;
     .it{
-        background-color: #4be4ff;
+      
         font-size: 32px;
         padding-bottom: 32px;
     }
     .cura {
-        background-color: #51ff4b;
+     
         padding-bottom: 32px;
     }
 
   }
   .hero-second2 {
+    display: flex;
+    ju
     padding: 30px 30px;
     img {
       object-fit: cover;
     }
-    .call-to-action{
-      padding : 50px;
-    }
+   
+    color: var(--base);
     .Learn2{
-    
+        &:hover {
+            background-color:#c7c5c5;
+            border-radius: 10px;
+          }
     }
+    
   }
 }
 
@@ -343,6 +359,10 @@ section {
         display: flex;
         flex-direction: column;
         margin: 12px;
+        &:hover {
+            background-color:#c7c5c5;
+            border-radius: 10px;
+          }
         img {
             object-fit: cover;
           }
@@ -370,13 +390,13 @@ section {
 /* Featured content styling................................................................................................ */
 
 .featured {
-    background-color: #574bff;
+ 
 
 
   article {
-    background-color: var(--yellow);
+ 
     .text1{
-        background-color: #0bee16;
+  
       }
   }
 }
@@ -397,5 +417,4 @@ section {
 footer{
     display: flex;
     justify-content: space-between;
-    background-color: #51ff4b;
 }
