@@ -32,8 +32,10 @@ h2 {
 h3 {
   font-size: 32px;
   font-weight: 600;
-  line-height: 1;
+  padding-left: 16px;
+  /* line-height: 1; */
   margin-bottom: 20px;
+
 }
 
 a {
@@ -239,9 +241,8 @@ section {
   }
 }
 
-/* HERO2 SECTION */
+/* Hero2 section layout with flex ................................................................................*/
 
-/* Hero2 section layout with flex */
 .hero2 {
   display: flex;
   @media (max-width: 1024px) {
@@ -251,20 +252,27 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 32px;
     flex:60%;
+    .text-hero-first2{
+        display:flex;
+        flex-direction: column;
+        align-content: space-between;
+        background-color: #ffda4b;
+    }
   }
   .hero-second2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    align-content: flex-start;
     flex:40%;
     .Learn2{
         display: flex;
-        background-color: aqua;
+        background-color: rgb(140, 0, 255);
         .Left{
             display: flex;
             flex:35%;
+            padding: 16px;
         }
 
         .Right{
@@ -273,6 +281,7 @@ section {
             flex:65%;
             align-content:end;       
             flex-direction: column;     
+            gap: 8px;
 
         }
     }
@@ -280,20 +289,23 @@ section {
 }
 
 
-/* Hero2 section content styling */
+/* Hero2 section content styling ...........................................................................................*/
+
 .hero2 {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(253, 253, 253);
   .hero-first2 {
     border-radius: 30px;
     padding : 32px 24px 32px 24px;
-    .call-to-action {
-      margin-top: 8px;
-      margin-bottom: 8px;
-      a {
-        margin-right: 10px;
-        margin-bottom: 10px;
-      }
+    .it{
+        background-color: #4be4ff;
+        font-size: 32px;
+        padding-bottom: 32px;
     }
+    .cura {
+        background-color: #51ff4b;
+        padding-bottom: 32px;
+    }
+
   }
   .hero-second2 {
     padding: 30px 30px;
@@ -309,57 +321,81 @@ section {
   }
 }
 
-/* FEATURED SECTION */
-/* Featured section layout styling with flex */
+/* Featured section layout with flex......................................................................................... */
+
 .featured {
+    .start{
+        display: flex;
+        font-size: 48px;
+        font-weight: 600;
+        justify-content: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
   .burgers {
     display: flex;
-    gap: 30px;
+    padding-left: 72px;
+    padding-right: 72px;
     @media (max-width: 1024px) {
       flex-direction: column;
     }
     article {
+        display: flex;
+        flex-direction: column;
+        margin: 12px;
+        img {
+            object-fit: cover;
+          }
       flex: 1;
+      .text1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 16px ;
+        .course {
+            padding-left: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .web {
+            padding-left: 16px;
+            margin-bottom: 24px;
+        }
+        
+      }
     }
   }
 }
 
-/* Featured section layout styling with grid */
-/* .featured {
-  .burgers {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-} */
+/* Featured content styling................................................................................................ */
 
-/* Featured content styling */
 .featured {
+    background-color: #574bff;
+
+
   article {
     background-color: var(--yellow);
-    padding: 30px;
-    border-radius: 30px;
-    h3 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    p {
-      margin-bottom: 10px;
-    }
-    figure {
-      padding-top: 10%;
-      overflow: hidden;
-      img {
-        transition: ease 3s all;
+    .text1{
+        background-color: #0bee16;
       }
-      &:hover {
-        img {
-          transform: scale(1.2);
-        }
-      }
-    }
   }
+}
+
+/* ..............section5...Lay out........ */
+
+.thesis {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 48px;
+    font-weight: 700;
+    padding-top: 32px;
+    padding-bottom: 12px;
+}
+
+/* ................footer............. */
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #51ff4b;
 }
